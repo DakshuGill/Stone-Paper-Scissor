@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rock Paper Scissor Game</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>ROCK🪨 PAPER📝 & SCISSOR✂️  GAME</h1>
+
+   <!--  For making choice out of stone, paper, scissor -->
+   <div class="choices">
+
+    <video autoplay loop muted plays-inline class="vid">
+      <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <div class="choice" id="stone">
+      <img src="./images/Stone.png" />
+    </div>
+    <div class="choice" id="scissor">
+      <img src="./images/Scissor.png" />
+    </div>
+    <div class="choice" id="paper">
+      <img src="./images/Paper.png" />
+    </div>
+   </div>
+  
+  <!--  For showing scores on score board. -->
+   <div class="score-board">
+    <div class="scores">
+      <p id="user-score">0</p>
+      <p id="user">USER</p>
+    </div>
+    <div class="scores">
+      <p id="comp-score">0</p>
+      <p id="computer">COMPUTER</p>
+    </div>
+   </div>
+  
+  <!-- For showing last message letter. -->
+  <div class="message-container">
+    <p id="msg">PLAY YOUR MOVE</p>
+  </div>
+  
+    <script src="script.js"></script>
+  </body>
+</html>
