@@ -7,5 +7,9 @@
     "start": "tsc"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@types/server": "^1.0.11",
+    "express": "^4.19.2"
+  }
 }
