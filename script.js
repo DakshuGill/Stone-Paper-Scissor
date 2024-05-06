@@ -49,7 +49,7 @@ if( compChoice === userChoice ) {
 	drawGame(); // game is draw.
 }
 else {
-	let userWin = true;
+	let userWin = null;
 	if( userChoice === 'rock' ) {
 		console.log('user choce is rock')
 		let lostCasesForUser=['paper']
@@ -72,7 +72,7 @@ else {
 	}
 	else if(userChoice==='scissor'){
 		console.log('user choce is sissor')
-		let lostCasesForUser=['stone']
+		let lostCasesForUser=['rock']
 		if(lostCasesForUser.includes(compChoice)){
           userWin=false
 		}
