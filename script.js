@@ -41,9 +41,9 @@ const showWinner = (userWin, userChoice, compChoice) => {
 
 // For generating computer choice
 const playGame = (userChoice) => {
-	// console.log("User Choice =", userChoice);
+	console.log("User Choice =", userChoice);
 const compChoice = getCompChoice();
-	// console.log("Computer Choice =", compChoice);
+	console.log("Computer Choice =", compChoice);
 
 if( compChoice === userChoice ) {
 	drawGame(); // game is draw.
@@ -51,16 +51,37 @@ if( compChoice === userChoice ) {
 else {
 	let userWin = true;
 	if( userChoice === 'rock' ) {
-		// compChoices = scissor or paper
-		userWin = compChoice === 'scissor' ? true : false;
+		console.log('user choce is rock')
+		let lostCasesForUser=['paper']
+		if(lostCasesForUser.includes(compChoice)){
+		userWin=false
 	}
-	else if( userChoice === "scissor" ) {
-		// compChoice  = rock, paper
-		userWin = compChoice === 'rock' ? false : true;
+		else{
+			userWin=true
+		}
 	}
-	else {// userChoice = paper and compChoice = scissor, rock
-		userWin = compChoice === "scissor" ? false : true;
-    }
+	else if(userChoice==='paper'){
+		console.log('user choce is paper')
+		let lostCasesForUser=['scissor']
+		if(lostCasesForUser.includes(compChoice)){
+			userWin=false
+		}
+		else{
+			userWin=true
+		}
+	}
+	else if(userChoice==='scissor'){
+		console.log('user choce is sissor')
+		let lostCasesForUser=['stone']
+		if(lostCasesForUser.includes(compChoice)){
+          userWin=false
+		}
+		else{
+			userWin=true
+		}
+	}
+	
+	
 	showWinner(userWin, userChoice, compChoice);
 }
 };
