@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded',()=>{
+	console.log('Script is working')
 let userScore = 0;
 let compScore = 0;
 
@@ -70,4 +72,5 @@ choices.forEach((choice) => {
 		const userChoice = choice.getAttribute("id");
 		playGame(userChoice);
 	});
+})
 })
